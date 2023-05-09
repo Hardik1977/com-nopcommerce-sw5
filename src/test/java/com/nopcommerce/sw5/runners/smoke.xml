@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testsuite" verbose="1">
+    <listeners>
+        <listener class-name="com.nopcommerce.sw5.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Smoke Test">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.nopcommerce.sw5.testsuite.ElectronicsTest"></class>
+            <class name="com.nopcommerce.sw5.testsuite.TopMenuTest"></class>
+            <class name="com.nopcommerce.sw5.testsuite.TestSuite"></class>
+        </classes>
+    </test>
+</suite>
